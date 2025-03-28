@@ -1,0 +1,99 @@
+{
+    "rules": [
+        {
+            "description": "Open Application: `right_control(caps) + tfcb -> terminal/finder/code/browser`",
+            "manipulators": [
+                {
+                    "from": {
+                        "key_code": "f",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_control",
+                                "command"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "shell_command": "open -a Finder"
+                        }
+                    ],
+                    "type": "basic"
+                },
+                {
+                    "from": {
+                        "key_code": "t",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_control",
+                                "command"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "shell_command": "open -a Terminal"
+                        }
+                    ],
+                    "type": "basic"
+                },
+                {
+                    "from": {
+                        "key_code": "c",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_control",
+                                "command"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "shell_command": "open -a 'Visual Studio Code'"
+                        }
+                    ],
+                    "type": "basic"
+                },
+                {
+                    "from": {
+                        "key_code": "b",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_control",
+                                "command"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "shell_command": "open -u 'http:'"
+                        }
+                    ],
+                    "type": "basic"
+                }
+            ]
+        },
+        {
+            "description": "Switch Clash Mode: `switch between global/mode`",
+            "manipulators": [
+                {
+                    "from": {
+                        "key_code": "g",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_control",
+                                "command"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "shell_command": "curl -s -X GET http://localhost:9090/configs | grep -q 'rule' && MODE='global' || MODE='rule'; curl -s -X PATCH http://localhost:9090/configs -d \"{\\\"mode\\\": \\\"$MODE\\\"}\";"
+                        }
+                    ],
+                    "type": "basic"
+                }
+            ]
+        }
+    ]
+}

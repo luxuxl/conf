@@ -1,0 +1,3 @@
+yabai -m rule --add app="^Raycast$" sticky=on layer=above manage=off
+yabai -m rule --add app="^Activity Monitor$" manage=off
+yabai -m rule --add app="^System Preferences$" manage=off

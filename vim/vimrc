@@ -1,0 +1,28 @@
+" ---- 禁用 viminfo 以及修改插件检测路径 ----
+set viminfofile=NONE
+" set viminfo+=n~/.config/vim/viminfo
+set runtimepath+=~/.config/vim,~/.config/vim/after
+
+" ----- 2、基础设置 -----
+" autocmd FileType * setlocal formatoptions-=c formatoptions -=r formatoptions-=o
+" autocmd FileType * setlocal formatoptions -=o
+set autoindent
+set timeoutlen=160                      " 相应速度更快
+set virtualedit=onemore                 " 可以移到最后一个字符
+set scrolloff=999                       " 光标永远居中 "
+highlight Normal ctermbg=NONE guibg=NONE     " 透明以显示背景颜色 "
+set encoding=utf-8
+set shortmess+=c
+set noswapfile
+set rnu
+set nu
+set shiftwidth=4
+set tabstop=4
+set laststatus=2
+set showtabline=2
+set cmdheight=1
+set syntax=on                           " 语法高亮
+set hlsearch                            " 搜索结果高亮
+
+set fillchars=vert:┇
+set fillchars=eob:\  

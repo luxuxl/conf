@@ -1,0 +1,134 @@
+# Rime schema
+# encoding: utf-8
+
+############# basic ##############
+
+schema:
+  name: "自用简体输入法"
+  schema_id: self
+  version: 0.22
+
+style:
+  candidate_list_layout: linear
+  color_scheme: dark_temple
+
+menu:
+  page_size: 9
+
+switches:
+- name: ascii_mode
+  reset: 1
+- name: full_shape
+  reset: 0
+- name: zh_simp
+  reset: 1
+
+############# engine ############
+engine:
+  filters:
+  - uniquifier
+  processors:
+  - ascii_composer # 中英文切换
+  - recognizer # 没有 recognizer 会怎么样? 输入邮箱比如 aaa@ 会变成 啊啊啊@
+  - key_binder # 按键绑定
+  - speller # 接受并处理字符输入, 比如模糊音
+  - punctuator # 标点符号的行为
+  - selector # 数字选择, 当然也可以换成其他
+  - navigator # 输入时光标是否可以移动
+  - express_editor
+  segmentors:
+  - ascii_segmentor
+  - matcher
+  - abc_segmentor
+  - punct_segmentor
+  - fallback_segmentor
+  translators:
+  - punct_translator
+  - "table_translator@custom_phrase"
+  - script_translator
+
+############# processors ################
+ascii_composer:
+  good_old_caps_lock: true
+  switch_key:
+    Caps_Lock: noop
+    Control_L: noop
+    Control_R: noop
+    Shift_L: commit_code
+    Shift_R: noop
+
+recognizer:
+  import_preset: default
+  patterns:
+    email: "^[A-Za-z][-_.0-9A-Za-z]*@.*$"
+    uppercase: "[A-Z][-_+.'0-9A-Za-z]*$"
+    url: "^(www[.]|https?:|ftp[.:]|mailto:|file:).*$|^[a-z]+[.].+$"
+
+key_binder:
+  bindings:
+  - {accept: Tab, send: Page_Down, when: has_menu}
+  - {accept: "Shift+Tab", send: Page_Up, when: has_menu}
+  - {accept: equal, send: Page_Down, when: has_menu}
+  - {accept: minus, send: Page_Up, when: has_menu}
+  - {accept: Escape, toggle: ascii_mode, when: always}
+
+speller:
+  auto_select: true
+  delimiter: " '"
+  algebra:
+  - "erase/^xx$/"
+  - "abbrev/^([a-z]).+$/$1/"
+  - "abbrev/^([zcs]h).+$/$1/"
+  - "derive/^([nl])ve$/$1ue/"
+  - "derive/^([jqxy])u/$1v/"
+  - "derive/([aeiou])ng$/$1gn/"
+  - "derive/([dtngkhrzcs])o(u|ng)$/$1o/"
+  alphabet: zyxwvutsrqponmlkjihgfedcba
+
+punctuator:
+  half_shape:
+    ',': ', '
+    '.': '.'
+    '<': '<'
+    '>': '>'
+    '/': '/'
+    '?': '?'
+    ';': ';'
+    ':': ': '
+    "'": "'"
+    '"': '"'
+    '\': '、'
+    '|': '|'
+    '`': '`'
+    '~': '~'
+    '!': '!'
+    '@': '@'
+    '#': '#'
+    '%': '%'
+    '$': '$'
+    '^': '^'
+    '&': '&'
+    '*': '*'
+    '(': '('
+    ')': ')'
+    '-': '-'
+    '_': '_'
+    '+': '+'
+    '=': '='
+    '[': '['
+    ']': ']'
+    '{': '{'
+    '}': '}'
+
+################### segmentors ##############
+
+
+
+################### translators ##############
+
+translator:
+  dictionary: pinyin_simp
+  preedit_format:
+  - "xform/([nl])v/$1ü/"
+  - "xform/([nl])ue/$1üe/"
+  - "xform/([jqxy])v/$1u/"

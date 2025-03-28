@@ -1,0 +1,92 @@
+[
+    // create cmd t/n
+    {
+        "key": "cmd+t",
+        "command": "workbench.action.files.newUntitledFile"
+    },
+    {
+        "key": "cmd+n",
+        "command": "explorer.newFile"
+    },
+    // close tab and terminal, cmd w
+    {
+        "key": "cmd+w",
+        "command": "workbench.action.terminal.kill",
+        "when": "terminalFocus || terminalEditorFocus"
+    },
+    // move tab, cmd j/k
+    {
+        "key": "cmd+j",
+        "command": "workbench.action.previousEditor"
+    },
+    {
+        "key": "cmd+k",
+        "command": "workbench.action.nextEditor"
+    },
+    // rename, [cmd shift] enter 
+    {
+        "key": "shift+cmd+enter",
+        "command": "renameFile",
+        "when": "foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly"
+    },
+    {
+        "key": "shift+cmd+enter",
+        "command": "-editor.action.insertLineBefore",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    // focus editor/terminal cmd shift e/t, e 是内置的
+    {
+        "key": "shift+cmd+t",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "shift+cmd+t",
+        "command": "workbench.action.terminal.focus",
+        "when": "view.terminal.visible && !terminalFocus"
+    },
+    {
+        "key": "shift+cmd+t",
+        "command": "workbench.action.terminal.new",
+        "when": "!view.terminal.visible"
+    },
+    {
+        "key": "shift+cmd+[",
+        "command": "-workbench.action.previousEditor"
+    },
+    // fold and expand cmd [/]
+    {
+        "key": "cmd+[",
+        "command": "editor.fold",
+        "when": "editorTextFocus && foldingEnabled"
+    },
+    {
+        "key": "alt+cmd+[",
+        "command": "-editor.fold",
+        "when": "editorTextFocus && foldingEnabled"
+    },
+    {
+        "key": "cmd+]",
+        "command": "editor.unfold",
+        "when": "editorTextFocus && foldingEnabled"
+    },
+    {
+        "key": "alt+cmd+]",
+        "command": "-editor.unfold",
+        "when": "editorTextFocus && foldingEnabled"
+    },
+    {
+        "key": "shift+cmd+]",
+        "command": "-workbench.action.nextEditor"
+    },
+    {
+        "key": "cmd+[",
+        "command": "-editor.action.outdentLines",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "cmd+]",
+        "command": "-editor.action.indentLines",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+]

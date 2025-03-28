@@ -1,0 +1,68 @@
+{
+    // - - - 全局 - - - 
+    "extensions.autoUpdate": false, // 禁止插件更新
+    "extensions.autoCheckUpdates": false, // 禁止插件检查更新
+    "update.mode": "none", // 禁止更新
+    "workbench.startupEditor": "none",
+    "workbench.layoutControl.enabled": false, // 隐藏布局控件
+    "window.commandCenter": false, // 隐藏命令中心
+    "workbench.editor.editorActionsLocation": "titleBar", // 隐藏编辑器操作, 不要隐藏, 包含 Run Code
+    "workbench.activityBar.location": "hidden", // 隐藏资源管理器、插件...
+
+    // - - - 资源管理器 - - - 
+    "explorer.confirmDelete": false, // 删除文件不确认
+    // 不显示垃圾文件
+    "files.exclude": {
+        "**/.*": true,
+        "**/bower_components": true,
+        "**/CVS": true,
+        "**/node_modules": true,
+        "**/tmp": true
+    },
+    "files.watcherExclude": {
+        // 不索引垃圾文件
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/node_modules/**": true,
+        "**/tmp/**": true,
+        "**/bower_components/**": true,
+        "**/dist/**": true
+    },
+
+    // - - - 编辑器 - - - 
+    "files.autoSave": "afterDelay", // 自动保存
+    "editor.cursorSurroundingLines": 999, // 光标行居中
+    "editor.fontFamily": "JetBrains Mono", // 设置字体
+    "editor.fontSize": 17,
+    "editor.lineHeight": 1.2,
+    "editor.wordWrap": "on", // 过长软换行
+    "editor.renderWhitespace": "boundary", // 显示空格
+    "editor.detectIndentation": false, // 不自动切换制表符、空格
+    "editor.acceptSuggestionOnEnter": "on", // 回车补全
+    "editor.acceptSuggestionOnCommitCharacter": false, // 禁止补全乱七八糟的东西
+    "workbench.editor.empty.hint": "hidden", // 隐藏新建文件时提示 "选择语言"
+    "breadcrumbs.enabled": false, // 标签页下面的路径
+
+    // - - - 编辑器 html - - - 
+    "editor.linkedEditing": true, // html标签自动重命名
+
+    // - - - 终端 - - - 
+    "terminal.integrated.fontSize": 14,
+
+    // - - - 优化, 效果未知 - - - 
+    "search.followSymlinks": false,
+    "workbench.editor.enablePreview": false,
+    "editor.minimap.renderCharacters": false,
+    "editor.links": false,
+    "http.proxy": "http://127.0.0.1:7890",
+    "http.proxyAuthorization": null,
+    "git.confirmSync": false,
+    "workbench.colorTheme": "One Dark Pro Mix",
+    "markdown-preview-enhanced.liveUpdate": false,
+    "window.newWindowProfile": "Default", // detect links
+    "workbench.commandPalette.history": 0,
+    "security.workspace.trust.untrustedFiles": "open",
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+}

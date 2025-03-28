@@ -1,0 +1,62 @@
+# ------------------ 基础配置 --------------------------
+# 如果连续输入的命令相同，历史记录中只保留一个
+setopt HIST_IGNORE_DUPS
+
+# 启用 cd 命令的历史记录，dirs 查看栈(包含当前路径), popd 返回上次路径
+setopt AUTO_PUSHD
+
+# 相同的历史路径只保留一个
+setopt PUSHD_IGNORE_DUPS
+
+# 文件夹与文件显示不同颜色
+export CLICOLOR=1
+
+# 始终开启代理
+export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890
+
+
+# ------------------- 自定义函数 & 别名 -----------------------------
+# 当前路径下查找文件
+alias ff='find . \( -path "*/venv/*" -o -path "*/Library/*" -o -path "*/.[tT]rash/*" -o -path "*/照片图库.photoslibrary/*" \) -prune -o -print | fzy | awk '\''{print "\"" $0 "\""}'\'' | tr -d "\n" | pbcopy'
+
+# home 下查找文件
+alias fh='{find ~ \( -path "*/Library/*" -o -path "*/venv/*" -o -path "*/.[tT]rash/*" -o -path "*/照片图库.photoslibrary/*" \) -prune -o -print; find ~/Library/Mobile\ Documents/ \( -path "*/OEBPS/*" -o -path "*/.[tT]rash \) -prune -o -print;} | fzy | awk '\''{print "\"" $0 "\""}'\'' | tr -d "\n" | pbcopy'
+
+# 可以进入文件
+alias cd='f() { [ -f "$1" ] && builtin cd "$(dirname "$1")" || builtin cd "$@"; }; f'
+
+# 设置代理函数
+alias proxy_off='unset https_proxy http_proxy all_proxy'
+
+
+# ---------------------- 自定义 Path --------------------------
+# Homebrew
+export PATH="/opt/homebrew/bin:/usr/local/bin/:/opt/local/sbin:$PATH"
+export HOMEBREW_NO_AUTO_UPDATE=1
+
+# Python
+pyvenv=""
+export PATH="$pyvenv:$PATH"
+
+# Github
+export GH="https://oauth2:XXX@github.com/luxuxl"
+#}}}
+
+
+# ------------------------ 插件 ------------------------
+# source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# powerlevel10k 美化作用
+source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
+
+# zsh-autosuggestions 显示补全提示
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# zsh-syntax-highlighting bash 命令语法高亮
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# 修改 zsh-autosuggestion 提示颜色
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#999999"
+
+# 使用 powerlevel10k 默认配置
+POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true

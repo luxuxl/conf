@@ -1,0 +1,86 @@
+/* 隐藏所用无用图标 */
+
+.mod-horizontal .workspace-tab-header-container-inner,
+.sidebar-toggle-button,
+.workspace-tab-header-new-tab,
+.workspace-tab-header-tab-list,
+.nav-header,
+.nav-folder.mod-root>.nav-folder-title,
+.code-block-flair,.copy-code-button{
+    display: none !important;
+}
+
+body:not(.show-ribbon) .workspace-ribbon.mod-left {
+    /* visibility: hidden; */
+    display: none;
+    
+}
+
+.mod-macos.is-hidden-frameless:not(.is-fullscreen, .show-ribbon) {
+    --frame-left-space: calc(var(--ribbon-width) + 3vw);
+}
+
+/* 大纲高亮 */
+
+body:not(.is-grabbing) .tree-item-self.is-active:hover,
+.tree-item-self.is-active {
+    color: var(--color-accent) !important;
+}
+
+/* 小箭头 */
+
+body:not(.no-active-line-highlight,
+.active-line-background) .cm-active:not(.HyperMD-quote,
+.HyperMD-header,
+.HyperMD-codeblock)::before {
+    position: absolute;
+    left: -1.5em;
+    top: 50%;
+    transform: translateY(-50%);
+    content: "➤";
+    font-size: 0.9em;
+    color: var(--color-accent) !important;
+    /* ➤➯➥➦➣➢➬➫➺➽↬༻༒ */
+    /* border-right: 3px solid var(--basic-border-color); */
+}
+
+/* 文件名 */
+
+.inline-title {
+    font-size: 2.5em;
+    margin-top: 2.5em;
+    margin-bottom: 1em;
+}
+
+/* 标题 */
+
+.markdown-source-view .cm-editor .HyperMD-header-1,
+.markdown-preview-sizer h1 {
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 0;
+}
+
+.markdown-source-view .cm-editor .HyperMD-header-2,
+.markdown-preview-sizer h2 {
+    font-weight: 500;
+    border-bottom: 1px solid var(--color-accent);
+    letter-spacing: 0;
+}
+
+.markdown-source-view .cm-editor .HyperMD-header-3,
+.markdown-preview-sizer h3 {
+    display: inline-block;
+    font-weight: 500;
+    border-bottom: 1px solid var(--color-accent);
+}
+
+.markdown-source-view .cm-editor .HyperMD-header-4,
+.markdown-preview-sizer h4 {
+    padding: 10px 0 5px 0;
+}
+
+.markdown-source-view .cm-editor .HyperMD-header-5,
+.markdown-preview-sizer h5{
+    padding: 0;
+}
