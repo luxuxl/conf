@@ -1,0 +1,269 @@
+{
+    "Apple Global Domain" =     {
+        NSStatusItemSelectionPadding = 4;
+        NSStatusItemSpacing = 8;
+        "com.apple.keyboard.modifiermapping.1452-641-0" =         (
+                        {
+                HIDKeyboardModifierMappingDst = 280379760050179;
+                HIDKeyboardModifierMappingSrc = 280379760050179;
+            },
+                        {
+                HIDKeyboardModifierMappingDst = 30064771129;
+                HIDKeyboardModifierMappingSrc = 30064771129;
+            },
+                        {
+                HIDKeyboardModifierMappingDst = 1095216660483;
+                HIDKeyboardModifierMappingSrc = 1095216660483;
+            }
+        );
+        "com.apple.mouse.tapBehavior" = 1;
+        "com.apple.trackpad.enableSecondaryClick" = 1;
+        "com.apple.trackpad.fiveFingerPinchSwipeGesture" = 0;
+        "com.apple.trackpad.fourFingerHorizSwipeGesture" = 2;
+        "com.apple.trackpad.fourFingerPinchSwipeGesture" = 2;
+        "com.apple.trackpad.fourFingerVertSwipeGesture" = 2;
+        "com.apple.trackpad.momentumScroll" = 1;
+        "com.apple.trackpad.pinchGesture" = 1;
+        "com.apple.trackpad.rotateGesture" = 1;
+        "com.apple.trackpad.scrollBehavior" = 2;
+        "com.apple.trackpad.threeFingerDragGesture" = 1;
+        "com.apple.trackpad.threeFingerHorizSwipeGesture" = 0;
+        "com.apple.trackpad.threeFingerTapGesture" = 2;
+        "com.apple.trackpad.threeFingerVertSwipeGesture" = 0;
+        "com.apple.trackpad.twoFingerDoubleTapGesture" = 0;
+        "com.apple.trackpad.twoFingerFromRightEdgeSwipeGesture" = 3;
+        "com.apple.trackpad.version" = 5;
+    };
+    "com.alicloud.smartdrive.ShipIt" =     {
+    };
+    "com.apple.AMPLibraryAgent" =     {
+        "pref:200:Machine Preferences" = {length = 4952, bytes = 0x00000001 00000000 00000000 00000000 ... de6a58ef 9a254fd7 };
+    };
+    "com.apple.AOSKit.RegInfo" =     {
+        lastComputerName = "Lusiay\\U2019s MacBook Air";
+        lastRegAllTime = "Saturday, March 29, 2025 at 23:26:38 China Standard Time";
+        ttlSeconds = 323748;
+    };
+    "com.apple.AOSPushRelay.TopicInfo" =     {
+        production = 2;
+    };
+    "com.apple.ManagedClient" =     {
+        MigratedShareKitPayloads = 1;
+    };
+    "com.apple.QuickLookDaemon" =     {
+        "Last Mod Date For /Library/QuickLook" = 1736935764;
+        "Last Mod Date For /System/Library/QuickLook" = 1736935764;
+        "Last Mod Date For ~/Library/QuickLook" = 0;
+    };
+    "com.apple.Safari" =     {
+        DidPromptSearchEngineAlert = 1;
+        SyncedTabsDeviceUUID = "0B7F50BD-5C1C-478F-A4C0-56A13E6CE363";
+    };
+    "com.apple.Spotlight" =     {
+        MenuItemHidden = 1;
+    };
+    "com.apple.commcenter.csidata" =     {
+        BootTime = 0x67e614dc;
+        CommCenterStartsThisBoot = 0x1;
+        VoWiFiLocationEvaluated = 0x1;
+        WifiCallingLocationAuthorizationStatus = 0x2;
+    };
+    "com.apple.configurationprofiles.user" =     {
+        LastCheckForExpiringProfiles = "2025-03-30 04:14:46 +0000";
+        "Workaround_22455316" = "2025-03-30 04:14:46 +0000";
+    };
+    "com.apple.controlcenter" =     {
+        AccessibilityShortcuts = 8;
+        AirDrop = 8;
+        Battery = 18;
+        BatteryShowPercentage = 1;
+        Bluetooth = 18;
+        Display = 2;
+        FocusModes = 2;
+        KeyboardBrightness = 18;
+        NowPlaying = 8;
+        ScreenMirroring = 2;
+        Siri = 8;
+        Sound = 18;
+        StageManager = 2;
+        UserSwitcher = 8;
+        WiFi = 18;
+    };
+    "com.apple.finder" =     {
+    };
+    "com.apple.identityservicesd" =     {
+        CheckedDuplicatedUniqueID = 1;
+    };
+    "com.apple.imservice.SMS" =     {
+        Accounts =         {
+            "A8B37B73-5292-4745-81F0-6BD8E990BCA0" =             {
+                LoginAs = "E:";
+                canRelayMMS = 1;
+                canRelaySMS = 1;
+                isSMSRelayCapable = 1;
+            };
+        };
+        ActiveAccounts =         (
+            "A8B37B73-5292-4745-81F0-6BD8E990BCA0"
+        );
+        OnlineAccounts =         (
+            "A8B37B73-5292-4745-81F0-6BD8E990BCA0"
+        );
+        Status =         {
+        };
+    };
+    "com.apple.imservice.ids.FaceTime" =     {
+        Status =         {
+        };
+    };
+    "com.apple.imservice.ids.iMessage" =     {
+        Status =         {
+        };
+    };
+    "com.apple.loginwindow" =     {
+        TALAppsToRelaunchAtLogin =         (
+                        {
+                BackgroundState = 2;
+                BundleID = "com.apple.systempreferences";
+                Hide = 0;
+                Path = "/System/Applications/System Settings.app";
+            },
+                        {
+                BackgroundState = 2;
+                BundleID = "com.github.wez.wezterm";
+                Hide = 0;
+                Path = "/Applications/WezTerm.app";
+            },
+                        {
+                BackgroundState = 2;
+                BundleID = "com.apple.finder";
+                Hide = 0;
+                Path = "/System/Library/CoreServices/Finder.app";
+            },
+                        {
+                BackgroundState = 2;
+                BundleID = "com.apple.preview";
+                Hide = 0;
+                Path = "/System/Applications/Preview.app";
+            }
+        );
+    };
+    "com.apple.metrickitd" =     {
+        MXClientsAvailable = 0;
+    };
+    "com.apple.screensaver" =     {
+        CleanExit = 1;
+        PrefsVersion = 100;
+        idleTime = 1200;
+        moduleDict =         {
+            moduleName = Ventura;
+            path = "/System/Library/Frameworks/ScreenSaver.framework/PlugIns/Ventura.appex";
+            type = 0;
+        };
+        showClock = 0;
+        tokenRemovalAction = 0;
+    };
+    "com.apple.settings.storage" =     {
+        AppsSizer =         {
+            EventID = 439537623;
+            ItemSizes =             {
+                "/Applications/ClashX.app/" = 51204096;
+                "/Applications/Safari.app/" = 0;
+                "/Applications/Vimlike.app/" = 5017600;
+                "/System/Applications/App Store.app/" = 9121792;
+                "/System/Applications/Automator.app/" = 4026368;
+                "/System/Applications/Calculator.app/" = 1941504;
+                "/System/Applications/Calendar.app/" = 6647808;
+                "/System/Applications/Chess.app/" = 4677632;
+                "/System/Applications/Clock.app/" = 5271552;
+                "/System/Applications/Contacts.app/" = 6033408;
+                "/System/Applications/Dictionary.app/" = 13991936;
+                "/System/Applications/FaceTime.app/" = 7397376;
+                "/System/Applications/FindMy.app/" = 20647936;
+                "/System/Applications/Font Book.app/" = 6131712;
+                "/System/Applications/Freeform.app/" = 22474752;
+                "/System/Applications/Home.app/" = 6537216;
+                "/System/Applications/Image Capture.app/" = 2146304;
+                "/System/Applications/Launchpad.app/" = 602112;
+                "/System/Applications/Maps.app/" = 43892736;
+                "/System/Applications/Mission Control.app/" = 172032;
+                "/System/Applications/Notes.app/" = 15863808;
+                "/System/Applications/Photo Booth.app/" = 3305472;
+                "/System/Applications/Preview.app/" = 5472256;
+                "/System/Applications/QuickTime Player.app/" = 4026368;
+                "/System/Applications/Reminders.app/" = 14114816;
+                "/System/Applications/Shortcuts.app/" = 1945600;
+                "/System/Applications/Siri.app/" = 2351104;
+                "/System/Applications/Stickies.app/" = 1339392;
+                "/System/Applications/Stocks.app/" = 2650112;
+                "/System/Applications/System Settings.app/" = 3342336;
+                "/System/Applications/TextEdit.app/" = 1802240;
+                "/System/Applications/Time Machine.app/" = 1081344;
+                "/System/Applications/VoiceMemos.app/" = 3014656;
+                "/System/Applications/Weather.app/" = 12918784;
+                "/Users/luxury/Library/Application Support/" = 45088768;
+            };
+        };
+        CacheVersion = 1;
+        DevCachesSizer =         {
+            EventID = 0;
+            ItemSizes =             {
+                "/Library/Developer/CommandLineTools/" = 2744561664;
+            };
+        };
+        TrashSizer =         {
+            EventID = 0;
+            ItemSizes =             {
+                "/Users/luxury/.Trash/ClashX.dmg" = 23277568;
+            };
+        };
+    };
+    "com.apple.sharingd" =     {
+        AppleIDAccount = {length = 6141, bytes = 0x62706c69 73743030 d4010203 04050607 ... 00000000 00001693 };
+        AppleIDAgentMetaInfo = {length = 572, bytes = 0x62706c69 73743030 d4010203 04050607 ... 00000000 000001aa };
+        PersonInfoCache = {length = 261, bytes = 0x62706c69 73743030 d4010203 04050607 ... 00000000 000000cb };
+        StreamID = bc1ce38e47db;
+    };
+    "com.apple.windowserver.displays" =     {
+        DisplaySets =         {
+            Configs =             (
+                                {
+                    DisplayConfig =                     (
+                                                {
+                            CurrentInfo =                             {
+                                Depth = 8;
+                                High = 900;
+                                Hz = 60;
+                                IsLink = 0;
+                                IsVRR = 0;
+                                OriginX = 0;
+                                OriginY = 0;
+                                Scale = 2;
+                                Wide = 1440;
+                            };
+                            Rotation = 0;
+                            UUID = "37D8832A-2D66-02CA-B9F7-8F30A301B230";
+                            UnmirrorInfo =                             {
+                                Depth = 8;
+                                High = 900;
+                                Hz = 60;
+                                IsLink = 0;
+                                IsVRR = 0;
+                                OriginX = 0;
+                                OriginY = 0;
+                                Scale = 2;
+                                Wide = 1440;
+                            };
+                        }
+                    );
+                }
+            );
+            Underscan =             {
+                "37D8832A-2D66-02CA-B9F7-8F30A301B230" = 1;
+            };
+            Version = 2;
+        };
+        account = 449;
+        "last_mode" = "per-display";
+    };
+}
