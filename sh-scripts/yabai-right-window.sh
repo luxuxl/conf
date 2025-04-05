@@ -12,4 +12,4 @@
 # @raycast.description Yabai swap to right window
 # @raycast.author Luxury
 
-{ yabai -m window --focus next || yabai -m window --focus first; } 2>/dev/null
+{ yabai -m window --focus next || yabai -m window --focus first || yabai -m window --focus mouse; } 2>/dev/null

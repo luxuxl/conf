@@ -20,7 +20,7 @@ export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_pr
 alias ff='find . \( -path "*/venv/*" -o -path "*/Library/*" -o -path "*/.[tT]rash/*" -o -path "*/照片图库.photoslibrary/*" \) -prune -o -print | fzy | awk '\''{print "\"" $0 "\""}'\'' | tr -d "\n" | pbcopy'
 
 # home 下查找文件
-alias fh='{find ~ \( -path "*/Library/*" -o -path "*/venv/*" -o -path "*/.[tT]rash/*" -o -path "*/照片图库.photoslibrary/*" \) -prune -o -print; find ~/Library/Mobile\ Documents/ \( -path "*/OEBPS/*" -o -path "*/.[tT]rash \) -prune -o -print;} | fzy | awk '\''{print "\"" $0 "\""}'\'' | tr -d "\n" | pbcopy'
+alias fh='{find ~ \( -path "*/Library/*" -o -path "*/venv/*" -o -path "*/.[tT]rash/*" -o -path "*/照片图库.photoslibrary/*" \) -prune -o -print; find ~/Library/Mobile\ Documents/ \( -path "*/OEBPS/*" -o -path "*/.[tT]rash" \) -prune -o -print;} | fzy | awk '\''{print "\"" $0 "\""}'\'' | tr -d "\n" | pbcopy'
 
 # 可以进入文件
 alias cd='f() { [ -f "$1" ] && builtin cd "$(dirname "$1")" || builtin cd "$@"; }; f'
@@ -60,3 +60,7 @@ export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#999999"
 
 # 使用 powerlevel10k 默认配置
 POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
+
+# 去除提示符的主机名
+export PS1="%n %1~ %# "
+export P9K_CONTENT="%n"

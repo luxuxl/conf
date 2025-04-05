@@ -12,5 +12,4 @@
 # @raycast.description
 # @raycast.author Luxury
 
-yabai -m window --focus mouse
 echo "Success"

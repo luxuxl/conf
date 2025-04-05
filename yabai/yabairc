@@ -11,20 +11,20 @@ yabai -m config left_padding   5
 yabai -m config right_padding  5
 yabai -m config window_gap     5
 
-yabai -m config focus_follows_mouse          autofocus
 # 设置鼠标是否跟随当前活动窗口 默认 off: 关闭 on: 开启
 yabai -m config mouse_follows_focus          on
 
 # label
-yabai -m space 1 --label Finder
-yabai -m space 2 --label "Terminal & Editor"
-yabai -m space 3 --label Notes
-yabai -m space 4 --label Browser
+yabai -m space 1 --label "1.Finder"
+yabai -m space 2 --label "2.Editor"
+yabai -m space 3 --label "3.Notes"
+yabai -m space 4 --label "4.Browser"
 
 # exclude app
 yabai -m rule --add app="^Karabiner-Elements$" manage=off
 yabai -m rule --add app="^Karabiner-EventViewer$" manage=off
 yabai -m rule --add app="^Raycast$" manage=off
+# yabai -m rule --add app="^IINA$" manage=off
 
 # 传递信号给 raycast 里的 yabai 桌面查询插件
 yabai -m signal --add event=space_changed action="nohup open -g raycast://extensions/krzysztoff1/yabai/screens-menu-bar?launchType=background > /dev/null 2>&1 &"

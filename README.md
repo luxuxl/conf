@@ -123,6 +123,7 @@ echo "$(whoami) ALL=(root) NOPASSWD: sha256:$(shasum -a 256 $(which yabai) | cut
 默认路径修改以及安装插件
 
 ```bash
+scutil --set HostName " "
 sudo sed -i '' '/^#   SHELL_SESSIONS_DISABLE=1/s/^# *//' /private/etc/zshrc_Apple_Terminal
 sudo bash -c 'echo "# change path of .zshrc" >> /etc/zshrc'
 sudo bash -c 'echo "source ~/.config/zsh/zshrc" >> /etc/zshrc'
@@ -243,6 +244,8 @@ plutil -convert xml1 ~/Library/Preferences/com.apple.HIToolbox.plist && code ~/L
 | 输入法 | Sogou/Rime | Official Site |
 | 同步盘 | nutstore | brew  |
 | 网盘 | onedrive | brew |
+| 空格预览 md | qlmarkdown | brew |
+
 
 ## 2025.3.22 更新内容
 
@@ -283,3 +286,7 @@ plutil -convert xml1 ~/Library/Preferences/com.apple.HIToolbox.plist && code ~/L
 - 将快捷键修改从 sys_pre 移动到 app_pre 中
 - app_pre 添加了 cmd+p 的 Unpin 快捷键
 - app_pre 添加了 从桌面链接一个文件夹替换掉默认的 Downloads
+
+## 2025.4.4 更新内容
+
+- 将 HostName 改为空白符 (p10k 默认配置对 ps1 不生效)

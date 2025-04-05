@@ -147,6 +147,7 @@
                     },
                     {
                         "description": "For Edit: `right_control(caps) + cv -> cmd + cv`",
+                        "enabled": false,
                         "manipulators": [
                             {
                                 "from": {
