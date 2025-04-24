@@ -165,15 +165,8 @@ defaults write com.apple.Safari "NSToolbar Configuration BrowserToolbarIdentifie
 
 
 # --------- Custom Application Shortcuts (自定义快捷键) - English Version ----------
-
-# 将最小化 ⌘+m 设置得很复杂, 防止误触
-defaults write -g NSUserKeyEquivalents -dict-add "Minimize..." "@~^$m"
-
 # 偏好设置 ⌘`
 # defaults write -g NSUserKeyEquivalents -dict-add "Preferences..." "@`"
-
-# 禁用 control+cmd+space 弹出emoji
-defaults write -g NSUserKeyEquivalents -dict-add "Emoji & Symbols" "@~^$ "
 
 # Apple Application tab move
 defaults write -g NSUserKeyEquivalents -dict-add "Show Previous Tab" "@j"
@@ -191,12 +184,19 @@ defaults write -g NSUserKeyEquivalents -dict-add "Pin Tab" "@p"
 defaults write com.apple.finder NSUserKeyEquivalents -dict-add "View Clean Up" "@r"
 defaults write com.apple.finder NSUserKeyEquivalents -dict-add "Merge All Windows" "^r"
 defaults write com.apple.finder NSUserKeyEquivalents -dict-add "Add to Sidebar" "^p"
-# defaults write com.apple.finder NSUserKeyEquivalents -dict-add "Open" "^e"
+defaults write com.apple.finder NSUserKeyEquivalents -dict-add "Open" "^e"
 
 # Preview 快捷键
 defaults write -g NSUserKeyEquivalents -dict-add "Highlight Text" "@$h"
 defaults write com.apple.preview NSUserKeyEquivalents -dict-add "Text Selection" "@$s"
 
-# Safari 快捷键
-# 替换愚蠢的 cmd i 发送邮件
+# 禁用愚蠢的快捷键
+# cmd i 发送邮件
 defaults write com.apple.Safari NSUserKeyEquivalents -dict-add "Share..." "@i"
+defaults write com.apple.Safari NSUserKeyEquivalents -dict-add "Reload Page From Origin" "@$r"
+
+# 禁用 control+cmd+space 弹出emoji
+defaults write -g NSUserKeyEquivalents -dict-add "Emoji & Symbols" "@~^$ "
+
+# 将最小化 ⌘+m 设置得很复杂, 防止误触
+defaults write -g NSUserKeyEquivalents -dict-add "Minimize..." "@~^$m"
